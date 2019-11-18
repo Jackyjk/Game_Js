@@ -1,0 +1,10 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    overflow: hidden;           /*不超出页面*/  
+}
+canvas{
+    background: #111;
+}
