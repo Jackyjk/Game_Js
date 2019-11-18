@@ -1,0 +1,70 @@
+
+body {
+		background: black;
+}
+.heart {
+	/* 内容居中 */
+		margin: 100px auto;
+		/* 定义宽高 */
+		width: 200px;
+		height: 200px;
+		/* border: 1px solid #0094ff; */
+		/* 定位 */
+		position: relative;
+		/* 调用动画名字 */
+		animation-name: shake;
+		/* 动画时间 */
+		animation-duration: 5s;
+		/* 动画执行次数 */
+		animation-iteration-count: infinite;
+}
+.heart div {
+		/* border: 1px solid #0094ff; */
+		width: 100%;
+		height: 100%;
+		/* 位置操作 */
+		position: absolute;
+		/* 背景颜色 */
+		background: red;
+		/* 调用动画 */
+		animation-name: shadow;
+		/* 定义动画时间 */
+		animation-duration: 5s;
+		/* 动画执行次数 */
+		animation-iteration-count: infinite;
+}
+.topLeft,
+.topRight {
+		/* 定义心形圆角 */
+		border-radius: 100px 100px 0 0;
+}
+/* <!-- 旋转正方形 --> */
+.topLeft {
+		transform: translate(-50px, 0) rotate(-45deg);
+}
+.topRight {
+		transform: translate(50px, 0) rotate(45deg);
+}
+.bottom {
+		transform: translate(0, 64px) rotate(45deg) scale(.9, .9);
+}
+/* 定义动画 */
+
+@keyframes shake {
+		from {
+				  transform: scale(.9, .9);
+		}
+		to {
+				  transform: scale(1.1, 1.1);
+		}
+}
+
+/* 改变心跳颜色时这部分要同时进行改变 */
+@keyframes shadow {
+		from {
+			box-shadow: 0px 0px 0px red;
+		}
+		to {
+				  box-shadow: 0px 0px 50px red;
+		}
+}
