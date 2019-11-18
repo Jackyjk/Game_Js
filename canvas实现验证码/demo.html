@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./demo.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="inputBox" >
+            <input type="text" class="inp" placeholder="请输入验证码">
+            <span class="icon"></span>
+        </div>
+        <p class="errorText">验证码错误，请刷新重新输入</p>
+        <div class="box">
+            <canvas id="myCanvas" width="270" height="80"></canvas>
+            <input type="button" class="refresh">
+        </div>
+        <button class="submit">submit</button>
+    </div>
+    <script src="./jquery.js"></script>
+    <script src="./demo.js"></script>
+</body>
+</html>
